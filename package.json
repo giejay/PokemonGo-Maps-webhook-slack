@@ -1,0 +1,18 @@
+{
+  "name": "PokemonGo-Maps-webhook-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "server": "node server.js"
+  },
+  "author": "Dimitry Declercq",
+  "license": "LGPL",
+  "devDependencies": {
+
+  },
+  "dependencies": {
+    "bunyan": "^1.5.1",
+    "restify": "^4.0.3"
+  }
+}
