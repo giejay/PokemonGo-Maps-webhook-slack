@@ -7,6 +7,7 @@ Pre-Requisites:
 - NPM
 
 Getting things up and running
+
 Install dependencies
 > npm install
 
