@@ -8,11 +8,11 @@
   },
   "author": "Dimitry Declercq",
   "license": "LGPL",
-  "devDependencies": {
-
-  },
+  "devDependencies": {},
   "dependencies": {
     "bunyan": "^1.5.1",
-    "restify": "^4.0.3"
+    "dateformat": "^1.0.12",
+    "restify": "^4.0.3",
+    "slack-node": "^0.2.0"
   }
 }

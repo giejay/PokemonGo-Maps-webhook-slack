@@ -1,12 +1,12 @@
 'use strict';
 
-startServer(3000);
+startServer(process.env.port || 3000);
 
 function startServer(port) {
   // Configure some logging so we can pretend to know whats going on
   var Logger = require('bunyan');
   var logger = new Logger({
-    name: "My Custom PoGo-Maps Extension",
+    name: "Pokemon Slack Extension",
     src: false,
     streams: [{
       // let's just write to the trusty STDOUT
@@ -22,10 +22,11 @@ function startServer(port) {
   });
 
   // Get our API up so it can be called from PoGo-Maps
-  var webhookApi = require('./lib/api')(logger);
+  var slackService = require('./lib/slack')(logger);
+  var webhookApi = require('./lib/api')(slackService, logger);
   webhookApi.listen(port, function (err) {
     if (err) throw err;
-    logger.info('My Custom PoGo-Maps Extension listening on port ' + port);
+    logger.info('Pokemon Slack Extension listening on port ' + port);
   });
 }
 
